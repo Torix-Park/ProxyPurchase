@@ -1,0 +1,128 @@
+{
+  "/": {
+    "src/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/pages/top/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  },
+  "/about": {
+    "src/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/pages/about/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  },
+  "/ask": {
+    "src/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/pages/ask/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  },
+  "/jobs": {
+    "src/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/pages/jobs/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  },
+  "/new": {
+    "src/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/pages/new/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  },
+  "/show": {
+    "src/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/pages/show/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  },
+  "/top": {
+    "src/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/pages/top/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  },
+  "/user": {
+    "src/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/pages/user/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  },
+  "/item": {
+    "src/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/pages/item/index.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  }
+}
