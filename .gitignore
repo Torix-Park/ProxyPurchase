@@ -1,0 +1,9 @@
+build/
+node_modules/
+npm-debug.log
+firebase-debug.log
+_site/
+.DS_Store
+
+.env.dev
+.env.prod
