@@ -1,6 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
 import './new-nested-item';
-import { Goods } from '../../models/goods';
 
 export class NewItem extends LitElement {
     static get properties() {

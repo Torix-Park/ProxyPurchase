@@ -4,12 +4,7 @@
   "license": "MIT",
   "repository": "HeratPatel/hnpwa",
   "scripts": {
-    "start": "gulp env-dev && polymer serve",
-    "build:static": "polymer build",
-    "build:prpl": "gulp env-prod && polymer build --auto-base-path && gulp firebase",
-    "serve:static": "polymer serve --port 5000 build/es5-bundled",
-    "serve:prpl": "firebase serve",
-    "perf-budget": "lighthouse https://hnpwa-fcf6b.firebaseapp.com --budget-path=budget.json"
+    "serve": "es-dev-server --app-index index.html --node-resolve --watch --open"
   },
   "dependencies": {
     "@polymer/app-layout": "^3.1.0",

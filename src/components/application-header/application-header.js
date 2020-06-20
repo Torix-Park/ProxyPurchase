@@ -54,9 +54,7 @@ export class Header extends connect(store)(LitElement) {
           <a ?selected=${currentPage === 'show'} href="/show">Show</a>
           <a ?selected=${currentPage === 'ask'} href="/ask">Ask</a>
           <a ?selected=${currentPage === 'jobs'} href="/jobs">Jobs</a>
-          <a ?selected=${currentPage === 'settings'} href="/settings"
-            >Settings</a
-          >
+          <a ?selected=${currentPage === 'settings'} href="/settings">Settings</a>
           <a ?selected=${currentPage === 'about'} href="/about">About</a>
         </nav>
       </app-header>
@@ -65,8 +63,8 @@ export class Header extends connect(store)(LitElement) {
         .opened="${isDrawerOpened}"
         class="app-drawer-container"
         @opened-changed="${e =>
-        store.dispatch(updateDrawerState(e.target.opened))}"
-      >
+        store.dispatch(updateDrawerState(e.target.opened))}">
+        
         <nav class="drawer-list">
           <a ?selected=${currentPage === 'top'} href="/top">Top</a>
           <a ?selected=${currentPage === 'new'} href="/new">New</a>

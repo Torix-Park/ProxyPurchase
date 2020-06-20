@@ -9,9 +9,6 @@ import { store } from '../../redux/store';
 import { fetchPageStories } from '../../redux/page/actions';
 
 export class Show extends connect(store)(PageViewElement) {
-
-
-
         static get properties() {
             return {
                 showStories: { type: Array },
