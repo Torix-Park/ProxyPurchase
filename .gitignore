@@ -1,9 +1,4 @@
-build/
-node_modules/
-npm-debug.log
-firebase-debug.log
-_site/
-.DS_Store
+/node_modules/
 
-.env.dev
-.env.prod
+# only generated for size check
+my-element.bundled.js
