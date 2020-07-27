@@ -3,16 +3,10 @@ import {
   html,
   css
 } from 'lit-element';
+import firebase from 'firebase';
 
-// Firebase App (the core Firebase SDK) is always required and must be listed first
-import * as firebase from "firebase/app";
 
-// Add the Firebase products that you want to use
-import "firebase/auth";
-import "firebase/database";
-
-// TODO: Replace the following with your app's Firebase project configuration
-var firebaseConfig = {
+const config = {
   apiKey: "AIzaSyAMXdaB-BGgIOUSIiYk9nRRb6j2hoiOpew",
   authDomain: "proxypurchase-bed70.firebaseapp.com",
   databaseURL: "https://proxypurchase-bed70.firebaseio.com",
@@ -22,8 +16,7 @@ var firebaseConfig = {
   appId: "1:499244763330:web:5a3bd45fffea077fda535b"
 };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(config);
 /**
  * An example element.
  *
@@ -55,9 +48,12 @@ export class LoginElement extends LitElement {
       id: {
         type: String
       },
-      pw: {
+      password: {
         type: String
       },
+      name: {
+        type: String
+      }
 
     };
   }
@@ -86,7 +82,19 @@ export class LoginElement extends LitElement {
 
   onClick() {
     console.log('a');
+    // firebase.database().ref('/user').set({
+    //   "id" : {
+        
+    //   }
+    // });
   }
+
+  // wirteUserData(Userid, Password) {
+  //   firebase.database().ref('/user').set({
+  //     id: Userid,
+  //     password: Password
+  //   });
+  // }
 
 }
 
