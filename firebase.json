@@ -1,8 +1,5 @@
 {
   "database": {
-    "rules": {
-      ".read" : true,
-      ".write" : true
-    }
+    "rules": "database.rules.json"
   }
 }
