@@ -33,31 +33,39 @@ export class Top extends connect(store)(PageViewElement) {
         store.dispatch(fetchPageStories(this.page, PAGES.TOP));
     }
 
+    // render() {
+    //     const { topStories } = this;
+
+    //     return html`
+    //   <section>
+    //     ${topStories.length > 0
+    //     ? topStories.map(
+    //         item => html`
+    //             <list-item
+    //               id="${item.id}"
+    //               title="${item.title}"
+    //               points="${item.points}"
+    //               user="${item.user}"
+    //               time_ago="${item.time_ago}"
+    //               comments_count="${item.comments_count}"
+    //               url="${item.url}"
+    //               domain="${item.domain || ''}"
+    //               type="${item.type}"
+    //             >
+    //             </list-item>
+    //           `
+    //     )
+    //     : html`
+    //           <div>No Content</div>
+    //         `}
+    //   </section>
+    // `;
+    // }
     render() {
-        const { topStories } = this;
 
         return html`
       <section>
-        ${topStories.length > 0
-        ? topStories.map(
-            item => html`
-                <list-item
-                  id="${item.id}"
-                  title="${item.title}"
-                  points="${item.points}"
-                  user="${item.user}"
-                  time_ago="${item.time_ago}"
-                  comments_count="${item.comments_count}"
-                  url="${item.url}"
-                  domain="${item.domain || ''}"
-                  type="${item.type}"
-                >
-                </list-item>
-              `
-        )
-        : html`
-              <div>No Content</div>
-            `}
+        <list-item></list-item>
       </section>
     `;
     }

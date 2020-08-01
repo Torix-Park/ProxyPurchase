@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>HNPWA</title>
+  <title>HNPWAAA</title>
   <meta name="generator" content="HNPWA" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Progressive Web App" />
@@ -66,6 +66,12 @@
 
   <!-- Performance tip: hint to the browser to start the handshake for the fonts site -->
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  Add support for Web Components to older browsers.
+
+  <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
 
   <script>
     (window.process = window.process || {}).env = {"NODE_ENV":"development","FB_API_KEY":"<<FIREBASE API KEY>>","FB_AUTH_DOMAIN":"<<FIREBASE AUTH DOMAIN>>","FB_DATABASE_URL":"<<FIREBASE DATABASE URL>>","FB_PROJECT_ID":"<<FIREBASE PROJECT ID>>","FB_STORAGE_BUCKET":"<<FIREBASE STORAGE BUCKET>>","FB_MESSAGING_SENDER_ID":"<<FIREBASE MESSAGING SENDER ID>>","FB_APP_ID":"<<FIREBASE APP ID>>","FB_VAPID_KEY":"<<FIREBASE VAPID KEY>>"};

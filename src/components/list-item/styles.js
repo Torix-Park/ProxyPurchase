@@ -1,6 +1,9 @@
 import { css } from 'lit-element';
 
 export const ListItemStyle = css `
+@use "@material/card";
+@include card.core-styles;
+
   :host {
     display: block;
     font-size: var(--detail-font-size);

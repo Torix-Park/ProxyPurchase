@@ -1,6 +1,6 @@
-import { css } from 'lit-element';
+import {  } from 'lit-element';
 
-export const SnackBarStyles = css`
+export const SnackBarStyles = `
   :host {
     display: block;
     position: fixed;
