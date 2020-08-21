@@ -51,7 +51,7 @@ export class loginElement extends LitElement {
             <input type="text" id="readuseremail" placeholder="이메일">
           </li>
           <li>
-            <input type="text" id="readuserpw" placeholder="비밀번호">
+            <input type="password" id="readuserpw" placeholder="비밀번호">
           </li>
           <li>
             <button @click=${this.Login} type="button">로그인</button>

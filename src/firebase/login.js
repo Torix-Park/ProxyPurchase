@@ -30,7 +30,7 @@ function LogOut() {
 function getnowUserData() {
     const user = JSON.parse(sessionStorage.getItem("User"));
     const username = sessionStorage.getItem("name")
-    let data = [user,username];
+    const data = [user,username];
     if (user && username) {
         return data;
     } else {
