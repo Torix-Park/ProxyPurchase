@@ -7,6 +7,12 @@ export class EditorItem extends LitElement {
         };
     }
 
+    static get styles() {
+        return css`
+            
+        `;
+    }
+
     render() {
         return html `
             <div class="form-item">

@@ -3,6 +3,7 @@ import { PageViewElement } from '../../utils/page-view-elemet';
 import { PageStyles } from '../styles';
 import { PAGES } from '../../constants';
 import '../../components/list-item';
+import '../'
 // redux helpers
 import { connect } from 'pwa-helpers/connect-mixin';
 import { store } from '../../redux/store';
@@ -58,6 +59,8 @@ export class New extends connect(store)(PageViewElement) {
         : html`
               <div>No Content</div>
             `}
+
+        
       </section>
     `;
     }

@@ -8,6 +8,7 @@ import {repeat} from 'lit-html/directives/repeat.js';
 
 import "../src/components/editor";
 import { Goods } from '../src/models/goods';
+import './state';
 
 export class EditorPage extends LitElement {
     static get properties() {
@@ -19,6 +20,15 @@ export class EditorPage extends LitElement {
         };
     }
 
+    static get styles() {
+        return css`
+            .hide {
+                display:none;
+                visibility: none;
+            }
+        `;
+    }
+
     constructor() {
         super();
         this.sum = 0;
@@ -26,6 +36,7 @@ export class EditorPage extends LitElement {
         if (!this.goods) {
             this.goods = [ new Goods("", 0, 1) ];
         }
+        this.state = 0;
     }
 
     render() {
@@ -38,12 +49,35 @@ export class EditorPage extends LitElement {
                 ${ repeat(this.goods, g => g.id, g => html`<editor-item .goods=${g} @on-close-event=${this.handleCloseEvent} @on-changed=${this.handleOnChanged}></editor-item>`) }
                 <span>${this.sum} + <input type="number" id="commission" @change=${this.handleCommissionEvent}> = ${this.allSum}</span>
             </div>
-            
+            <button class=${this.state != 1 ? 'hide' : ''} @click=${this.handleOnCancel}>취소</button>
+            <button class=${this.state != 1 ? 'hide' : ''} @click=${this.handleOnSubmit}>확인</button>
+            <button class=${this.state != 0 ? 'hide' : ''} @click=${this.handleOnDelete}>삭제</button>
+            <button class=${this.state != 0 ? 'hide' : ''} @click=${this.handleOnUpdate}>수정</button>
+
+            <state-view></state-view>
         `;
     }
 
+    handleOnCancel() {
+
+    }
+
+    handleOnSubmit() {
+        var data = this.getGoodsList();
+        console.log(data);
+    }
+
+    handleOnDelete() {
+        this.resetGoodsList();
+    }
+
+    handleOnUpdate() {
+        var data = this.getGoodsList();
+        console.log(data);
+    }
+
     handleCloseEvent(e) {
-        var index = -1;
+        // var index = -1;
         var item = e.detail.goods;
 
         for (var i = 0; i < this.goods.length; i++) {
@@ -84,31 +118,13 @@ export class EditorPage extends LitElement {
         this.requestUpdate();
     }
 
+    getGoodsList() {
+        var itemList = this.goods;
+        return itemList;
+    }
 
-
-
-
-
-
-    asciiArtEvent(e) {
-        console.log('░░░░░░░░░░░░░░░░░░░░░░░░░░░');
-        console.log('░░░░░░░░░░░░░▄███▄▄▄░░░░░░░');
-        console.log('░░░░░░░░░▄▄▄██▀▀▀▀███▄░░░░░');
-        console.log('░░░░░░░▄▀▀░░░░░░░░░░░▀█░░░░');
-        console.log('░░░░▄▄▀░░░░░░░░░░░░░░░▀█░░░');
-        console.log('░░░█░░░░░▀▄░░▄▀░░░░░░░░█░░░');
-        console.log('░░░▐██▄░░▀▄▀▀▄▀░░▄██▀░▐▌░░░');
-        console.log('░░░█▀█░▀░░░▀▀░░░▀░█▀░░▐▌░░░');
-        console.log('░░░█░░▀▐░░░░░░░░▌▀░░░░░█░░░');
-        console.log('░░░█░░░░░░░░░░░░░░░░░░░█░░░');
-        console.log('░░░░█░░▀▄░░░░▄▀░░░░░░░░█░░░');
-        console.log('░░░░█░░░░░░░░░░░▄▄░░░░█░░░░');
-        console.log('░░░░░█▀██▀▀▀▀██▀░░░░░░█░░░░');
-        console.log('░░░░░█░░▀████▀░░░░░░░█░░░░░');
-        console.log('░░░░░░█░░░░░░░░░░░░▄█░░░░░░');
-        console.log('░░░░░░░██░░░░░█▄▄▀▀░█░░░░░░');
-        console.log('░░░░░░░░▀▀█▀▀▀▀░░░░░░█░░░░░');
-        console.log('░░░░░░░░░█░░░░░░░░░░░░█░░░░');
+    resetGoodsList() {
+        this.goods = [ new Goods("", 0, 1) ];
     }
 }
 
